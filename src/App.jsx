@@ -1,14 +1,13 @@
 import styles from "./style";
 import {
-  Billing,
-  Business,
-  CardDeal,
   CTA,
   Footer,
   Navbar,
   Stats,
-  Testimonials,
   Hero,
+  Table,
+  Reservations,
+  Clients,
 } from "./components";
 
 const App = () => (
@@ -30,10 +29,9 @@ const App = () => (
     >
       <div className={`${styles.boxWidth}`}>
         <Stats />
-        <Business />
-        <Billing />
-        <CardDeal />
-        <Testimonials />
+        <Reservations />
+        <Table />
+        <Clients />
         <CTA />
         <Footer />
       </div>

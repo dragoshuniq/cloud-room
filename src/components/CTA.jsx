@@ -1,5 +1,4 @@
 import styles from "../style";
-import Button from "./Button";
 
 const CTA = () => (
   <section
@@ -15,7 +14,14 @@ const CTA = () => (
     <div
       className={`${styles.flexCenter} sm:ml-10 ml-0 sm:mt-0 mt-10`}
     >
-      <Button />
+      <a
+        href="https://t.me/cloud_rooom_bot"
+        target="_blank"
+        rel="noreferrer"
+        className={`select-none	mt-10 py-4 px-6 font-poppins font-medium text-[18px] text-primary bg-blue-gradient rounded-[10px] outline-none `}
+      >
+        Începe acum
+      </a>
     </div>
   </section>
 );
