@@ -102,7 +102,7 @@ export const footerLinks = [
     links: [
       {
         name: "Instagram",
-        link: "https://www.hoobank.com/content/",
+        link: "https://www.instagram.com/cloud_room_drochia/",
       },
     ],
   },
@@ -111,7 +111,7 @@ export const footerLinks = [
     links: [
       {
         name: "Telegram",
-        link: "https://www.hoobank.com/help-center/",
+        link: "https://t.me/cloud_rooom_bot",
       },
     ],
   },
@@ -135,7 +135,7 @@ export const socialMedia = [
   {
     id: "social-media-2",
     icon: telegram,
-    link: "https://www.facebook.com/",
+    link: "https://t.me/cloud_rooom_bot",
   },
 
   {
