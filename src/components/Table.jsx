@@ -15,7 +15,7 @@ const Table = () => {
         >
           Tournament table
         </Link>
-        <div className="rounded-2xl overflow-hidden border-2 border-[#33bbcf] shadow-lg	w-full flex items-center justify-center">
+        <div className="rounded-2xl overflow-hidden min-h-[450px] border-2 border-[#33bbcf] shadow-lg	w-full flex items-center justify-center">
           <Brackets />
         </div>
       </div>
