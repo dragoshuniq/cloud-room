@@ -1,42 +1,20 @@
-import styles from "./style";
 import {
-  CTA,
-  Footer,
-  Navbar,
-  Stats,
-  Hero,
-  Table,
-  Reservations,
-  Clients,
-} from "./components";
+  BrowserRouter,
+  Navigate,
+  Route,
+  Routes,
+} from "react-router-dom";
+import Main from "./main";
+import Tournaments from "./components/Tournaments";
 
 const App = () => (
-  <div className="bg-primary w-full overflow-hidden">
-    <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-      <div className={`${styles.boxWidth}`}>
-        <Navbar />
-      </div>
-    </div>
-
-    <div className={`bg-primary ${styles.flexStart}`}>
-      <div className={`${styles.boxWidth}`}>
-        <Hero />
-      </div>
-    </div>
-
-    <div
-      className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}
-    >
-      <div className={`${styles.boxWidth}`}>
-        <Stats />
-        <Reservations />
-        <Table />
-        <Clients />
-        <CTA />
-        <Footer />
-      </div>
-    </div>
-  </div>
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" Component={Main} />
+      <Route path="/tournament" Component={Tournaments} />
+      <Route path="*" element={<Navigate to={"/"} replace />} />
+    </Routes>
+  </BrowserRouter>
 );
 
 export default App;

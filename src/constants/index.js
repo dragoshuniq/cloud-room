@@ -23,7 +23,12 @@ export const navLinks = [
 
   {
     id: "clients",
-    title: "Clieți",
+    title: "Clienți",
+  },
+
+  {
+    url: "tournament",
+    title: "Turneu",
   },
 ];
 

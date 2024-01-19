@@ -1,11 +1,42 @@
-import React from 'react';
+import styles from "./style";
+import {
+  CTA,
+  Footer,
+  Navbar,
+  Stats,
+  Hero,
+  Table,
+  Reservations,
+  Clients,
+} from "./components";
 
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import './index.css';
+const Main = () => (
+  <div className="bg-primary w-full overflow-hidden">
+    <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+      <div className={`${styles.boxWidth}`}>
+        <Navbar />
+      </div>
+    </div>
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <div className={`bg-primary ${styles.flexStart}`}>
+      <div className={`${styles.boxWidth}`}>
+        <Hero />
+      </div>
+    </div>
+
+    <div
+      className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}
+    >
+      <div className={`${styles.boxWidth}`}>
+        <Stats />
+        <Reservations />
+        <Table />
+        <Clients />
+        <CTA />
+        <Footer />
+      </div>
+    </div>
+  </div>
 );
+
+export default Main;
