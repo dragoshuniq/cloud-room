@@ -23,10 +23,10 @@ const Brackets = ({ x = 0.9, y = 0.8 }) => {
 
   useEffect(() => {
     fetchMatches();
-    const intervalId = setInterval(fetchMatches, MATCHES_INTERVAL);
-    return () => clearInterval(intervalId);
+    // const intervalId = setInterval(fetchMatches, MATCHES_INTERVAL);
+    // return () => clearInterval(intervalId);
   }, []);
-
+  console.log(matches);
   if (!matches.length) return null;
   return (
     <div id="brackets-tournament">
@@ -41,6 +41,7 @@ const Brackets = ({ x = 0.9, y = 0.8 }) => {
           teamNameFallback,
           resultFallback,
         }) => {
+          console.log(bottomParty);
           return (
             <div className="w-full h-full flex flex-col justify-around bg-gray-gradient rounded-xl">
               <div
