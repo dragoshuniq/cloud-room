@@ -36,23 +36,23 @@ export const features = [
   {
     id: "feature-1",
     icon: star,
-    title: "Mess 1",
+    title: "Rezervare Instantanee",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Asigură-ți locul la masa ta de gaming preferată în doar câteva clicuri.",
   },
   {
     id: "feature-2",
-    icon: shield,
-    title: "Mess 2",
+    icon: send,
+    title: "Notificări Personalizate",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Primește alerte pentru rezervările tale confirmate și noutăți exclusive.",
   },
   {
     id: "feature-3",
-    icon: send,
-    title: "Mess 3",
+    icon: shield,
+    title: "Gestioneaza rezervarile",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Exista sectiunea rezervarile mele unde poti gestiona foarte simplu cu rezervarile existente",
   },
 ];
 
@@ -60,25 +60,25 @@ export const feedback = [
   {
     id: "feedback-1",
     content:
-      "Ea ebu ce site pizdos, oooooo o o o o o o o o o o oo o o o o o o It is a long established ",
+      "Aici, trăirile noastre ating alt nivel, iar vei rămâne plăcut surprins de ceea ce poate oferi un joc.",
     name: "Daniel Lozovan",
-    title: "Patan din Drochia",
+    title: "Cloud Room",
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi6kBM7-lSN8eIvjKZjwEO1orvLR9U-xie8IFmK27IVQ&s",
   },
   {
     id: "feedback-2",
     content:
-      "Ea manal waiiiiiii, bag pl ce site pizdos , unde sa fac podpiska ? It is a long established ",
+      "Dacă simți nevoia de relaxare, cred că acesta este locul perfect pentru a o face.",
     name: "Mindru Ion",
-    title: "BE Developer",
+    title: "Cloud Room",
     img: "https://media.licdn.com/dms/image/D4D03AQGHJB8WjKRSjg/profile-displayphoto-shrink_200_200/0/1690719123190?e=2147483647&v=beta&t=dGq8suar_4a4g0gj6zJqflweV9g047YEJuu-M6Lg27k",
   },
   {
     id: "feedback-3",
     content:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. T",
-    name: "Huesos ceva",
-    title: "Huesos",
+      "Acest loc a reușit să îmbine atmosfera relaxantă cu provocările captivante ale jocurilor. Personalul a fost extrem de prietenos și atent la nevoile noastre.",
+    name: "Mindru Iulia",
+    title: "Cloud Room",
     img: "https://cdn5.vectorstock.com/i/1000x1000/53/04/baby-nipple-on-a-white-background-vector-5145304.jpg",
   },
 ];
@@ -91,13 +91,13 @@ export const stats = [
   },
   {
     id: "stats-2",
-    title: "Cifra 2",
-    value: "230+",
+    title: "Jocuri",
+    value: "8",
   },
   {
     id: "stats-3",
-    title: "Cifra 3",
-    value: "200+",
+    title: "Playstation-uri",
+    value: "4",
   },
 ];
 

@@ -32,7 +32,7 @@ const Reservations = () => {
     <section id="reservations" className={layout.section}>
       <div className={layout.sectionInfo}>
         <h2 className={styles.heading2}>
-          Un mesaj ceva,
+          Rezervă Locul Tău Rapid
           <br className="sm:block hidden" />
         </h2>
         <div className="flex justify-center items-center gap-10 mt-10 flex-col md:flex-row w-full">
@@ -49,10 +49,7 @@ const Reservations = () => {
           </a>
           <div className="flex flex-col">
             <p className={`${styles.paragraph} max-w-[470px]`}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua. Mauris vitae ultricies leo integer
-              malesuada.
+             Bucură-te de o experiență de gaming fără griji! Cu botul nostru PlayStation pentru rezervări, economisești timp și obții transparență totală în privința disponibilității și orarului în sala noastră.:
             </p>
             <div className="flex items-center justify-center">
               <a

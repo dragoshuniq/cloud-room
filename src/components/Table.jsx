@@ -13,7 +13,7 @@ const Table = () => {
           className={clsx(styles.heading2, "mb-5 z-[1]")}
           to="/tournament"
         >
-          Tournament table
+          Turneu
         </Link>
         <div className="rounded-2xl overflow-hidden min-h-[450px] border-2 border-[#33bbcf] shadow-lg	w-full flex items-center justify-center">
           <Brackets />

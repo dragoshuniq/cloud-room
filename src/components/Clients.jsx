@@ -15,7 +15,7 @@ const Testimonials = () => (
       </h2>
       <div className="w-full md:mt-0 mt-6">
         <p className={`${styles.paragraph} text-left max-w-[450px]`}>
-          Game On Anywhere: Where Victory Meets Convenience!
+          Joaca Activ Oriunde: Unde Victoria Întâlnește Conveniența!"
         </p>
       </div>
     </div>
