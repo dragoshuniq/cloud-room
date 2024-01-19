@@ -5,8 +5,9 @@ import {
 } from "@g-loot/react-tournament-brackets/dist/cjs";
 import useWindowDimensions from "../utils/useWindowDImensions";
 import clsx from "clsx";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { getMatches } from "../api/API";
+import { areDeeplyEqual } from "../utils/deep";
 // import { simpleBracket } from "./mock-matches";
 
 const INTERVAL_SECONDS = 5; // schimba aici intervalul la request in secunde
@@ -16,18 +17,27 @@ const Brackets = ({ x = 0.9, y = 0.8 }) => {
   const { height, width } = useWindowDimensions();
 
   const [matches, setMatches] = useState([]);
+  const matchesRef = useRef(matches);
 
-  const fetchMatches = useCallback(() => {
-    getMatches().then(setMatches);
-  }, []);
+  useEffect(() => {
+    matchesRef.current = matches;
+  }, [matches]);
+
+  const fetchMatches = async () => {
+    const newMatches = await getMatches();
+    const areEqual = areDeeplyEqual(newMatches, matchesRef.current);
+    if (!areEqual) {
+      setMatches(newMatches);
+    }
+  };
 
   useEffect(() => {
     fetchMatches();
-    // const intervalId = setInterval(fetchMatches, MATCHES_INTERVAL);
-    // return () => clearInterval(intervalId);
+    const intervalId = setInterval(fetchMatches, MATCHES_INTERVAL);
+    return () => clearInterval(intervalId);
   }, []);
-  console.log(matches);
-  if (!matches.length) return null;
+
+  if (!matches?.length) return null;
   return (
     <div id="brackets-tournament">
       <SingleEliminationBracket
@@ -41,7 +51,6 @@ const Brackets = ({ x = 0.9, y = 0.8 }) => {
           teamNameFallback,
           resultFallback,
         }) => {
-          console.log(bottomParty);
           return (
             <div className="w-full h-full flex flex-col justify-around bg-gray-gradient rounded-xl">
               <div
@@ -49,8 +58,12 @@ const Brackets = ({ x = 0.9, y = 0.8 }) => {
                 className={clsx(
                   "flex justify-between items-center px-5",
                   {
-                    "font-bold  text-[#33bbcf]": topParty.isWinner,
-                    "text-red-500": !topParty.isWinner,
+                    "font-bold  text-[#33bbcf]":
+                      topParty.isWinner && !bottomParty.isWinner,
+                    "text-red-500":
+                      !topParty.isWinner && bottomParty.isWinner,
+                    "text-white":
+                      !topParty.isWinner && !bottomParty.isWinner,
                   }
                 )}
               >
@@ -71,8 +84,12 @@ const Brackets = ({ x = 0.9, y = 0.8 }) => {
                 className={clsx(
                   "flex justify-between items-center px-5",
                   {
-                    "font-bold  text-[#33bbcf]": bottomParty.isWinner,
-                    "text-red-500": !bottomParty.isWinner,
+                    "font-bold  text-[#33bbcf]":
+                      bottomParty.isWinner && !topParty.isWinner,
+                    "text-red-500":
+                      !bottomParty.isWinner && topParty.isWinner,
+                    "text-white":
+                      !topParty.isWinner && !bottomParty.isWinner,
                   }
                 )}
               >

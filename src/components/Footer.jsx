@@ -9,11 +9,14 @@ const Footer = () => (
     <div
       className={`${styles.flexStart} md:flex-row flex-col mb-8 w-full`}
     >
-      <div className="flex-[1] flex flex-col justify-start mr-10">
+      <div className="flex-[1] flex flex-col md:justify-start justify-center items-center md:items-start mr-10 w-full">
         <img
+          onClick={() =>
+            window.scrollTo({ top: 0, behavior: "smooth" })
+          }
           src={logo}
           alt="hoobank"
-          className="w-[266px] h-[72.14px] object-contain"
+          className="w-[266px] h-[72.14px] object-contain cursor-pointer"
         />
         <p className={`${styles.paragraph} mt-4 max-w-[312px]`}>
           Un nou level de gaming
