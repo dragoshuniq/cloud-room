@@ -7,7 +7,7 @@ import useWindowDimensions from "../utils/useWindowDImensions";
 import clsx from "clsx";
 import { useCallback, useEffect, useState } from "react";
 import { getMatches } from "../api/API";
-import { matchesData } from "./mock-matches";
+// import { simpleBracket } from "./mock-matches";
 
 const INTERVAL_SECONDS = 5; // schimba aici intervalul la request in secunde
 const MATCHES_INTERVAL = 1000 * INTERVAL_SECONDS;
@@ -23,15 +23,16 @@ const Brackets = ({ x = 0.9, y = 0.8 }) => {
 
   useEffect(() => {
     fetchMatches();
-    // const intervalId = setInterval(fetchMatches, MATCHES_INTERVAL);
-    // return () => clearInterval(intervalId);
+    const intervalId = setInterval(fetchMatches, MATCHES_INTERVAL);
+    return () => clearInterval(intervalId);
   }, []);
 
+  if (!matches.length) return null;
   return (
     <div id="brackets-tournament">
       <SingleEliminationBracket
         theme={theme}
-        matches={matchesData}
+        matches={matches}
         matchComponent={({
           onMouseEnter,
           topParty,
